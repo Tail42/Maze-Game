@@ -123,6 +123,44 @@ input:focus, select:focus {
 #instructions {
     margin-top: 425px;
 }
+
+label {
+    margin: 0 10px;
+    color: #333;
+    font-size: 15px;
+}
+
+/* Style checkboxes as sliders (optional) */
+input[type="checkbox"] {
+    appearance: none;
+    width: 40px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 10px;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background: #4CAF50;
+}
+
+input[type="checkbox"]::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: 0.3s;
+}
+
+input[type="checkbox"]:checked::before {
+    left: 22px;
+}
  
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 400px) {

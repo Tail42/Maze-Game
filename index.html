@@ -10,7 +10,7 @@
 <body>
 
   <div id="page">
-
+    <!-- Victory Message -->
     <div id="Message-Container">
       <div id="message">
         <h1>Congratulations!</h1>
@@ -23,6 +23,11 @@
     <br>
     <div id="menu">
       <div class="custom-select">
+        <select id="eventSelect">
+          <option value="none">Events</option>
+        </select>
+      </div>
+      <div class="custom-select">
         <select id="diffSelect">
                   <option value="10">Easy</option>
                   <option value="15">Medium</option>
@@ -31,6 +36,9 @@
               </select>
       </div>
       <input id="startMazeBtn" type="button" onclick="makeMaze()" value="Start" />
+      <label>Fog <input type="checkbox" id="fogToggle"></label>
+      <label>Record <input type="checkbox" id="recordToggle"></label>
+      <input id="replayBtn" type="button" onclick="replayMoves()" value="Replay" />
     </div>
 
     <div id="view">
